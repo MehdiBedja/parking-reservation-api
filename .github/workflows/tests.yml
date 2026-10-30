@@ -1,0 +1,22 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Reservation_app_backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        # mysqlclient needs MySQL headers and is not used by the SQLite test settings
+        run: grep -v mysqlclient requirements.txt > /tmp/req.txt && pip install -r /tmp/req.txt
+      - name: Run tests
+        run: python manage.py test --settings=Reservation_app_backend.settings_test
