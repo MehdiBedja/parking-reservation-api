@@ -59,6 +59,16 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'accounts_app.CustomUser'
 
+# Token auth is needed by get_user_info / change_password / logout, which read
+# the token returned by /user/login. Session and Basic are DRF's defaults.
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
+
 
 SITE_ID=1 #see later for what is that?
 
