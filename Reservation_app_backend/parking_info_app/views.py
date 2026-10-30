@@ -1,4 +1,5 @@
 # parking_info_app/views.py
+import mimetypes
 import os
 from django.conf import settings
 from rest_framework.decorators import api_view
@@ -35,8 +36,9 @@ def get_parking(request, pk):
 
 def image_view(request, image_name):
     image_path = os.path.join(settings.STATICFILES_DIRS[0], 'images', image_name)
+    content_type = mimetypes.guess_type(image_path)[0] or 'application/octet-stream'
     with open(image_path, 'rb') as f:
-        return JsonResponse(f.read(), content_type='image/png')
+        return HttpResponse(f.read(), content_type=content_type)
     
 
 

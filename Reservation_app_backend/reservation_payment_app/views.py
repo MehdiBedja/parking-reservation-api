@@ -11,17 +11,6 @@ from parking_info_app.serializers import ParkingSerializer
 from .serializers import ParkingPlaceSerializer, ReservationSerializer, ReservationSerializer2, ReservationSerializer3
 from .models import ParkingPlace, Reservation
 
-@api_view(['POST'])
-def create_reservation(request):
-    if request.method == 'POST':
-        serializer = ReservationSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse({"message": "Reservation created successfully", "data": serializer.data}, status=status.HTTP_201_CREATED)
-        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
 @api_view(['GET'])
 def get_reservations(request, id=None):
     user = get_object_or_404(CustomUser, id=id)

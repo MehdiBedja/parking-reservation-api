@@ -7,13 +7,6 @@ from accounts_app.serializers import CustomUserSerializer
 from parking_info_app.serializers import ParkingSerializer
 from .models import ParkingPlace, Reservation
 
-class ReservationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Reservation
-        fields = '__all__'
-
-
-
 class ParkingPlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingPlace
