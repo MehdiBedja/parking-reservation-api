@@ -1,9 +1,4 @@
-# Parking Reservation · Backend API
-
-[![Tests](https://github.com/MehdiBedja/parking-reservation-api/actions/workflows/tests.yml/badge.svg)](https://github.com/MehdiBedja/parking-reservation-api/actions/workflows/tests.yml)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Django](https://img.shields.io/badge/django-5.0-0C4B33)
-![DRF](https://img.shields.io/badge/DRF-3.14-red)
+# Parking reservation: backend API
 
 A Django REST Framework API for a parking reservation app. It manages users, parkings organized by Algerian administrative divisions (wilaya → daïra → commune), parking places and their availability, and reservations with unique codes and payment status. The [Android client](https://github.com/MehdiBedja/parking-reservation-android) consumes it.
 
@@ -109,4 +104,4 @@ GitHub Actions runs them on every push.
 
 ## Author
 
-**Mahdi Bedja** · [Portfolio](https://mehdibedja.github.io) · [LinkedIn](https://www.linkedin.com/in/mahdi-bedja-0b94031b3/)
+Mahdi Bedja · [Portfolio](https://mehdibedja.github.io) · [LinkedIn](https://www.linkedin.com/in/mahdi-bedja-0b94031b3/)
