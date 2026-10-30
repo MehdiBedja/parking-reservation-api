@@ -1,11 +1,11 @@
 # Parking Reservation · Backend API
 
-[![Tests](https://github.com/MehdiBedja/Reservation-app-backend/actions/workflows/tests.yml/badge.svg)](https://github.com/MehdiBedja/Reservation-app-backend/actions/workflows/tests.yml)
+[![Tests](https://github.com/MehdiBedja/parking-reservation-api/actions/workflows/tests.yml/badge.svg)](https://github.com/MehdiBedja/parking-reservation-api/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Django](https://img.shields.io/badge/django-5.0-0C4B33)
 ![DRF](https://img.shields.io/badge/DRF-3.14-red)
 
-A Django REST Framework API for a parking reservation app. It manages users, parkings organized by Algerian administrative divisions (wilaya → daïra → commune), parking places and their availability, and reservations with unique codes and payment status. The [Android client](https://github.com/MehdiBedja/Reservation-app-frontend) consumes it.
+A Django REST Framework API for a parking reservation app. It manages users, parkings organized by Algerian administrative divisions (wilaya → daïra → commune), parking places and their availability, and reservations with unique codes and payment status. The [Android client](https://github.com/MehdiBedja/parking-reservation-android) consumes it.
 
 ## Architecture
 
@@ -71,8 +71,8 @@ erDiagram
 ## Run locally
 
 ```bash
-git clone https://github.com/MehdiBedja/Reservation-app-backend.git
-cd Reservation-app-backend/Reservation_app_backend
+git clone https://github.com/MehdiBedja/parking-reservation-api.git
+cd parking-reservation-api/Reservation_app_backend
 python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
